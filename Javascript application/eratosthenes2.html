@@ -1,0 +1,75 @@
+<html>
+    <head>
+    <style>
+        .fib{
+            display:block;
+            padding: 100px;
+            margin top:100px;
+            border-top:100px;
+        }
+        #answer{
+            visibility: hidden; 
+        }
+        #btn{
+            display: flex;
+        } 
+        
+    </style>
+    <title>Fibonanci</title>
+        
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>   
+                <div>
+                    <br>
+                </div>
+                <div class="prime">
+                    <a>Factorial</a>
+                    <input id="val3" type="text" placeholder="value"> 
+                    <a type="text"></a>
+                    <div><button id="prime" type="button" class="btn btn-primary">Factorial</button></div>
+                    <a id="test3"></a>
+
+                </div>
+
+
+
+<script>
+              document.getElementById('prime').addEventListener('click', function(){
+                var input_value = document.getElementById('val3').value;
+const sieve = max => {
+  // Make array of length max and fill with true
+  const sieve = new Array(max).fill(true)
+
+  // Iterate from 2 until square root of max
+  for (let i = 2; i < Math.sqrt(max); i++) {
+    // If the number is labelled a prime then we can start at i^2 and mark every multiple of i
+    // from there as NOT a prime
+    if (sieve[i]) {
+      for (let j = Math.pow(i, 2); j < max; j += i) {
+        sieve[j] = false
+      }
+    }
+  }
+
+  // Now we can reduce our sieve to only the Prime indexes that are true
+  return sieve.reduce((primes, isPrime, i) => {
+    if (isPrime && i > 1) {
+      primes.push(i)
+    }
+
+    return primes
+  }, [])
+}
+                document.getElementById('test3').innerHTML = sieve(input_value);    
+                console.log('clicked');
+              });
+    
+            
+              
+</script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+
+</html>

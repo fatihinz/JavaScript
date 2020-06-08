@@ -1,0 +1,58 @@
+<html>
+    <head>
+    <style>
+        .fib{
+            display:block;
+            padding: 100px;
+            margin top:100px;
+            border-top:100px;
+        }
+        #answer{
+            visibility: hidden; 
+        }
+        #btn{
+            display: flex;
+        } 
+        
+    </style>
+    <title>Fibonanci</title>
+        
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>   
+                <div>
+                    <br>
+                </div>
+                <div class="fib">
+                    <a>Factorial</a>
+                    <input id="val2" type="text" placeholder="value"> 
+                    <a type="text"></a>
+                    <div><button id="fact" type="button" class="btn btn-primary">Factorial</button></div>
+                    <a id="test2"></a>
+
+                </div>
+
+
+
+<script>
+              document.getElementById('fact').addEventListener('click', function(){
+                var input_value = document.getElementById('val2').value;
+                function factorial(num){
+                  var top = 1;
+                  for(var i=1;i<=num;i++){
+                      top = top*(i);
+                  }  
+                  return top;
+                }
+                document.getElementById('test2').innerHTML = factorial(input_value);    
+                console.log('clicked');
+              });
+    
+            
+              
+</script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+
+</html>

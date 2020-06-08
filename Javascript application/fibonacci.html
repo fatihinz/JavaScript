@@ -1,0 +1,47 @@
+<html>
+    <head>
+    <title>Fibonanci</title>
+        
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>
+    <a>Fibonanci</a>
+        
+                <div>
+                    <input id="val1" type="text" placeholder="value"> 
+                    <p id="answer"></p>
+                    <a id="test" type="text"></a>
+                </div>
+
+        <button id="btn" type="button" class="btn btn-primary">Calculate</button>
+
+
+<script>
+              document.getElementById('btn').addEventListener('click', function(){
+
+                var input_value = document.getElementById('val1').value;
+                  
+function fibonacci(num){
+  var a = 1, b = 0, temp;
+
+  while (num >= 0){
+    temp = a;
+    a = a + b;
+    b = temp;
+    num--;
+  }
+
+  return b;
+}
+                  
+                  
+                  
+                document.getElementById('test').innerHTML = fibonacci(input_value);    
+                console.log('clicked');
+              })
+</script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+
+</html>

@@ -1,0 +1,74 @@
+<html>
+    <head>
+    <style>
+        .fib{
+            display:block;
+            padding: 100px;
+            margin top:100px;
+            border-top:100px;
+        }
+        #answer{
+            visibility: hidden; 
+        }
+        #btn{
+            display: flex;
+        } 
+        
+    </style>
+    <title>Fibonanci</title>
+        
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>   
+                <div>
+                    <br>
+                </div>
+                <div class="degrad">
+                    <a>Degree to Radian</a>
+                    <input id="degree" type="text" placeholder="value"> 
+                    <a type="text"></a>
+                    <a>Radian to Degree</a>
+                    <input id="radian" type="text" placeholder="value"> 
+                    <a type="text"></a>
+                    <div><button id="degrad" type="button" class="btn btn-primary">LCD</button></div>
+                    <a id="degreeradian"></a><br>
+                    <a id="radiandegree"></a>
+                </div>
+
+
+
+<script>
+              document.getElementById('degrad').addEventListener('click', function(){
+
+                var input_degree = document.getElementById('degree').value;
+                var input_radian = document.getElementById('radian').value;
+                
+ function degreeToRadian(input_degree) {
+  return Math.round((input_degree * (Math.PI / 180))*100)/100;
+}
+ function radianToDegree(input_radian) {
+  return radian * (180 / Math.PI);
+}                 
+                  
+                  
+                  
+                  
+                  function LCD(a, b) {
+                    return ((a === 0) || (b === 0)) ? 0 : Math.abs(a * b) / euclid(a, b);
+                    }
+                  
+                  
+                document.getElementById('degreeradian').innerHTML = degreeToRadian(input_degree);
+                
+                document.getElementById('radiandegree').innerHTML = degreeToRadian(input_radian); 
+                console.log('clicked');
+              });
+    
+            
+              
+</script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+
+</html>

@@ -1,0 +1,81 @@
+<html>
+    <head>
+    <style>
+        .fib{
+            display:block;
+            padding: 100px;
+            margin top:100px;
+            border-top:100px;
+        }
+        #answer{
+            visibility: hidden; 
+        }
+        #btn{
+            display: flex;
+        } 
+        
+    </style>
+    <title>Fibonanci</title>
+        
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        
+    </head>
+    <body> 
+        
+    <div class="card">
+    <div class="card-header" id="headingSix">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Sieve of Eratosthenes
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+      <div class="card-body">
+                <div class="eratos">
+                    <a>Factorial</a>
+                    <input id="eratos_input" type="text" placeholder="value"> 
+                    <a type="text"></a>
+                    <div><button id="eratos" type="button" class="btn btn-primary">Factorial</button></div>
+                    <a id="eratos_result"></a>
+
+                </div>
+      </div>
+    </div>
+  </div>    
+        
+
+
+
+
+<script>
+              document.getElementById('eratos').addEventListener('click', function(){
+                var input_value = document.getElementById('eratos_input').value;
+                function factorial(num){
+                    for(var i=2; i<num; i++){
+                        if (num % i == 0){
+                            console.log(i);
+                            num = "not prime";
+                        } else { console.log("it is prime");
+                                num = "prime";
+                               };
+                        return num;
+                    }
+
+                    
+                }
+                document.getElementById('eratos_result').innerHTML = factorial(input_value);    
+                console.log('clicked');
+              });
+    
+            
+              
+</script>
+        
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>    
+    
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+
+</html>

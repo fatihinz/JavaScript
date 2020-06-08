@@ -1,0 +1,90 @@
+<html>
+    <head>
+    <style>
+        .fib{
+            display:block;
+            padding: 100px;
+            margin top:100px;
+            border-top:100px;
+        }
+        #answer{
+            visibility: hidden; 
+        }
+        #btn{
+            display: flex;
+        } 
+        
+    </style>
+    <title>Fibonanci</title>
+        
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>   
+                <div>
+                    <br>
+                </div>
+                 <div class="eratos">
+                    <a>Prime Numbers until </a>
+                    <input id="eratos_input" type="text" placeholder="value"> 
+                    <a type="text"></a>
+                    <div><button id="eratos" type="button" class="btn btn-primary">Show Primes</button></div>
+                    <a id="eratos_result"></a>
+
+                </div>
+
+
+
+<script>
+    
+      var rprimes = [];
+              document.getElementById('eratos').addEventListener('click', function(){
+                var input_value = document.getElementById('eratos_input').value;
+                  let d1 = document.getElementById('eratos_result');
+                  
+                  function sieveOfEratosthenes(maxNumber) {
+  const isPrime = new Array(maxNumber + 1).fill(true);
+  isPrime[0] = false;
+  isPrime[1] = false;
+
+  var primes = [];
+
+  for (let number = 2; number <= maxNumber; number += 1) {
+    if (isPrime[number] === true) {
+      primes.push(number);
+
+      /*
+       * Optimisation.
+       * Start marking multiples of `p` from `p * p`, and not from `2 * p`.
+       * The reason why this works is because, at that point, smaller multiples
+       * of `p` will have already been marked `false`.
+       *
+       * Warning: When working with really big numbers, the following line may cause overflow
+       * In that case, it can be changed to:
+       * let nextNumber = 2 * number;
+       */
+      let nextNumber = number * number;
+
+      while (nextNumber <= maxNumber) {
+        isPrime[nextNumber] = false;
+        nextNumber += number;
+      }
+    }
+  }        
+    var a = primes.toString();
+  return primes;
+}
+                  
+           //     document.getElementById('eratos_result').innerHTML = factorial(input_value);    
+                  let d2 = sieveOfEratosthenes(input_value);
+                  d1.insertAdjacentHTML('beforeend', d2);
+                  console.log('clicked');
+                  console.log(a);
+    
+            
+              
+</script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+
+</html>

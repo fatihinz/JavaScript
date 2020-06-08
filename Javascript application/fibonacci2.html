@@ -1,0 +1,75 @@
+<html>
+    <head>
+    <style>
+        .fib{
+            display:block;
+            padding: 100px;
+            margin top:100px;
+            border-top:100px;
+        }
+        #answer{
+            visibility: hidden; 
+        }
+        #btn{
+            display: flex;
+        } 
+        
+    </style>
+    <title>Fibonanci</title>
+        
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>   
+                <div>
+                    <br>
+                </div>
+                <div class="fib">
+                    <a>Fibonacci</a>
+                    <input id="val1" type="text" placeholder="value"> 
+                    <a type="text"></a>
+                    <div><button id="btn" type="button" class="btn btn-primary">Fibonacci</button></div>
+                    <a id="test"></a>
+                    <p id="answer">
+                        <br>
+                    function fibonacci(num){ <br>
+                  var a = 1, b = 0, temp;<br>
+                  while (num >= 0){<br>
+                    temp = a;<br>
+                    a = a + b;<br>
+                    b = temp;<br>
+                    num--;<br>
+                  }<br>
+                  return b;<br>
+                }
+                    </p>
+
+
+                </div>
+
+
+
+<script>
+              document.getElementById('btn').addEventListener('click', function(){
+                var input_value = document.getElementById('val1').value;
+                function fibonacci(num){
+                  var a = 1, b = 0, temp;
+                  while (num >= 0){
+                    temp = a;
+                    a = a + b;
+                    b = temp;
+                    num--;
+                  }
+                  return b;
+                }
+                document.getElementById('test').innerHTML = fibonacci(input_value);    
+                console.log('clicked');
+              });
+    
+            
+              
+</script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+
+</html>
