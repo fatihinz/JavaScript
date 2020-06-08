@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>date</title>
+    <script>
+function displayDate(){       
+    var d = new Date();
+    var x = d.toLocaleTimeString();
+    
+    
+        document.getElementById("dateinfo").innerHTML = x;
+     }
+    </script>
+</head>
+<body onload="displayDate()">
+    
+    <p id="dateinfo"></p>
+</body>
+</html>

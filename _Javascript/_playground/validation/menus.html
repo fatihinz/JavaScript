@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>dropdowns</title>
+    <script>
+function validate(){
+    var color = document.myform.color.value;
+    if (color==""){
+        alert("pick a color");
+        document.myform.color.focus();
+        return false;
+    } else{
+        alert("validation is successfull");
+        return true;
+    }
+}
+
+    </script>
+</head>
+<body>
+    <h3>Select a colour :</h3>
+  <form name="myform" action="dropdown.jsp" onSubmit="return validate()">
+    <select name="color">
+        <option value="">Select a color</option>
+        <option value="blue">Blue</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="yellow">yellow</option>
+
+
+    </select>
+    <input type=submit value="submit"/>
+    </form>
+
+</body>
+</html>

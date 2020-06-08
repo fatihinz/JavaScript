@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>local and global</title>
+    <script>
+
+        var y =30;
+function fun1(){
+    var x = 20;
+    document.write("Inside fun1 X :"+ x +"</br>");
+        document.write("Inside fun1 y :"+ y +"</br>");    
+}
+function fun2(){
+    var a = 40;
+    var y = 35;
+    document.write("Inside fun2 a :"+ a +"</br>");
+    document.write("Inside fun2 y :"+ y +"</br>");    
+}
+function fun3(){
+    var a = 50;
+    document.write("Inside fun3 a :"+ a +"</br>");
+    document.write("Inside fun3 y :"+ y +"</br>");    
+}
+        
+        
+        fun1();
+        fun2();
+        fun3();
+                document.write("y :"+ y );
+
+        
+    </script>
+
+</head>
+
+</html>

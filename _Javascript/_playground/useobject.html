@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>USing an object</title>
+    <script>
+function blogpost(title,text){
+    this.title=title;
+    this.text = text;
+    this.addCategory = addCategory;
+    this.displayBlogPost = displayBlogPost;
+}
+        
+        
+function addCategory(category){
+    
+    this.category = category;
+}
+function displayBlogPost(){
+    document.write(this.title);
+    document.write(this.text+"<br/>");
+    document.write(this.category+"<br/>");    
+}
+        
+        
+var bp1 = new blogpost("JQuery","makes JS easier");
+    bp1.addCategory("UI technology");
+    bp1.displayBlogPost();
+        
+var bp2 = new blogpost("Angular","makes angular easier");
+    bp2.addCategory("advanced UI technology");
+    bp2.displayBlogPost();
+
+        
+var bp3 = new blogpost("JQuery","makes JS easier");
+    bp3.displayBlogPost();
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

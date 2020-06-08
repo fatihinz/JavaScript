@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>DOM create/remove nodes</title>
+    <script>
+function handleRemove(){
+    var parent = document.getElementById("div1");
+    var child= document.getElementById("p2");
+    parent.removeChild(child);
+}
+    </script>
+</head>
+<body>
+<div id="div1">
+<p id="p1">All the power is in you</p>
+<p id="p2">You can do anything</p>
+</div>
+    <input type="button"value="remove" onclick="handleRemove()">
+</body>
+</html>

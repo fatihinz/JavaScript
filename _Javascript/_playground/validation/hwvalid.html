@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Validation user regular expression</title>
+    <script>
+function validate(){
+    var exp = /^[A-Za-z0-9\s]{3,10}$/;
+    var password=document.myform.password.value;
+    var result = exp.test(password);
+    if (result){
+        alert("validation is successfull");
+    }else {
+document.getElementById("err").innerHTML = "Please enter correct values";
+document.myform.password.focus();
+        return false;
+    }
+    
+        var exp1 = /^[0-9]{10}$/;
+    var phone=document.myform.phone.value;
+    var result = exp1.test(phone);
+    if (result){
+        alert("validation is successfull");
+    }else {
+document.getElementById("err").innerHTML = "Please enter correct values";
+document.myform.phone.focus();
+        return false;
+    }
+    
+        var exp2 = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    var email=document.myform.email.value;
+    var result = exp2.test(email);
+    if (result){
+        alert("validation is successfull");
+    }else {
+document.getElementById("err").innerHTML = "Please enter correct values";
+document.myform.email.focus();
+        return false;
+    }
+    
+}
+
+    </script>
+</head>
+<body>
+    <h3>User Registration :</h3>
+  <form name="myform" action="dropdown.jsp" onSubmit="return validate()">
+    Email:<input type="email" name="email"/>
+    Password:<input type="password" name="password"/>     
+    Phone:<input type="number" name="phone"/>
+
+      <b id="err"></b><br/>
+      <input type=submit value="submit"/>
+    </form>
+
+</body>
+</html>

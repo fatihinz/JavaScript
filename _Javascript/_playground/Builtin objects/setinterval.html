@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>set interval</title>
+    <script>
+function continousDisplay(){
+    setInterval(displayDate,1000);
+}
+        
+        
+function displayDate(){       
+    var d = new Date();
+    var x = d.toLocaleTimeString();
+    
+    
+        document.getElementById("dateinfo").innerHTML = x;
+     }
+    </script>
+</head>
+<body onload="continousDisplay()">
+    
+    <p id="dateinfo"></p>
+</body>
+</html>

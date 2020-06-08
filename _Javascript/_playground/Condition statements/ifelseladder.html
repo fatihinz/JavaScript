@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>IF</title>
+    <script>
+var jsmarks = parseInt(prompt("Please enter js mark :"));
+var java = parseInt(prompt("enter java mark : "));
+var dotnet = parseInt(prompt("enter dotnet mark : "));
+var total = jsmarks + java + dotnet;
+    document.write("Total Marks :"+ total+"</br>");
+var average = total/3 ;
+        document.write("average :"+ average+"</br>");
+        
+        
+    if (jsmarks >= 35 && java >=35 && dotnet >= 35){
+        document.write("passed"+"</br>");
+        if (average >=35 && average<60){
+                    document.write("Grade : C");
+        } else if (average >= 60 && average<70){
+            document.write("Grade : B");
+        }else{
+            document.write("Grade : A");
+             }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }else {
+        document.write("Result : Failed");
+    }
+        
+        
+    </script>
+    
+</head>
+
+</html>

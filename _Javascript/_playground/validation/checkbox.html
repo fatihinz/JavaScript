@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Checkboxes</title>
+    <script>
+function validate(){
+var valid = false;
+    if(document.getElementById("JavaScript").checked){
+       valid = true;
+       }
+    else if(document.getElementById("JQuery").checked){
+       valid = true;
+       }
+    else if(document.getElementById("AngularJS").checked){
+       valid = true;
+    }
+    else if(document.getElementById("NodeJS").checked){
+       valid = true;
+       }
+    if(valid){
+        alert("Validation Successfull");
+    }else{
+        alert("Please select at least one ...");
+        return false;
+    }
+}
+
+    </script>
+</head>
+<body>
+    <h3>Select a tech :</h3>
+  <form name="myform" action="dropdown.jsp" onSubmit="return validate()">
+    <input type="checkbox" id="JavaScript" value="JavaScript"> JavaScript
+    <input type="checkbox" id="JQuery" value="JQuery"> JQuery
+    <input type="checkbox" id="AngularJS" value="AngularJS"> AngularJS
+    <input type="checkbox" id="NodeJS" value="NodeJS"> NodeJS
+ 
+
+
+    <input type=submit value="submit"/>
+    </form>
+
+</body>
+</html>

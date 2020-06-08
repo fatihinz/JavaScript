@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>IF</title>
+    <script>
+var maths = parseInt(prompt("Enter maths mark :"));
+var Phy = parseInt(prompt("Enter Physics mark : "));
+var chem = parseInt(prompt("Enter chemistry mark : "));
+var total = maths + chem + Phy;
+    document.write("Total Marks :"+ total+"</br>");
+var average = total/3 ;
+        document.write("average :"+ average+"</br>");
+        
+        
+        if (average <70){
+                    document.write("Grade : C");
+        } else if (average >= 70 && average<90){
+            document.write("Grade : B");
+        }else{
+            document.write("Grade : A");
+             }        
+        
+    </script>
+    
+</head>
+
+</html>
